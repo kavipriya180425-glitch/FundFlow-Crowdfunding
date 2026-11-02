@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FundFlow | Crowdfunding Platform</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="logo">Fund<span>Flow.</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#campaigns">Campaigns</a>
+            <a href="#create">Start Campaign</a>
+            <a href="#donors">Donors</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">TOGETHER WE CAN MAKE A CHANGE</p>
+
+            <h1>Small Donations.<br>
+                <span>Big Differences.</span>
+            </h1>
+
+            <p>
+                Support meaningful causes and help create
+                a better tomorrow.
+            </p>
+
+            <a href="#campaigns" class="main-btn">
+                Explore Campaigns →
+            </a>
+        </div>
+    </section>
+
+    <!-- Campaign Section -->
+    <section class="section" id="campaigns">
+
+        <div class="section-heading">
+            <p>MAKE AN IMPACT</p>
+            <h2>Featured Campaigns</h2>
+        </div>
+
+        <div id="campaignList" class="campaign-grid">
+            Loading campaigns...
+        </div>
+
+    </section>
+
+    <!-- Create Campaign -->
+    <section class="section create-section" id="create">
+
+        <div class="section-heading">
+            <p>START SOMETHING GOOD</p>
+            <h2>Create a Campaign</h2>
+        </div>
+
+        <form id="campaignForm" class="form-box">
+
+            <label>Campaign Title</label>
+            <input type="text" id="campaignTitle"
+                   placeholder="Enter campaign title" required>
+
+            <label>Description</label>
+            <textarea id="campaignDescription"
+                      placeholder="Describe your campaign"
+                      required></textarea>
+
+            <label>Target Amount (₹)</label>
+            <input type="number" id="campaignGoal"
+                   min="1" step="1"
+                   placeholder="Enter target amount" required>
+
+            <button type="submit">Create Campaign</button>
+
+            <p id="campaignMessage" class="message"></p>
+
+        </form>
+
+    </section>
+
+    <!-- Donation Section -->
+    <section class="section" id="donate">
+
+        <div class="section-heading">
+            <p>BE THE REASON SOMEONE SMILES</p>
+            <h2>Make a Donation</h2>
+        </div>
+
+        <form id="donationForm" class="form-box">
+
+            <label>Your Name</label>
+            <input type="text" id="donorName"
+                   placeholder="Enter your name" required>
+
+            <label>Donation Amount (₹)</label>
+            <input type="number" id="donationAmount"
+                   min="1" step="1"
+                   placeholder="Enter amount" required>
+
+            <label>Select Campaign</label>
+            <select id="donationCampaign" required>
+                <option value="">Choose a campaign</option>
+            </select>
+
+            <button type="submit">Donate Now</button>
+
+            <p id="message" class="message"></p>
+
+        </form>
+
+    </section>
+
+    <!-- Donor List -->
+    <section class="section" id="donors">
+
+        <div class="section-heading">
+            <p>OUR SUPPORTERS</p>
+            <h2>Recent Donors</h2>
+        </div>
+
+        <div id="donorList" class="donor-list">
+            Loading donors...
+        </div>
+
+    </section>
+    
+<!-- DEMO PAYMENT MODAL -->
+<div id="paymentModal" class="payment-modal" hidden>
+    <div class="payment-box">
+        <p class="payment-label">FUNDFlow DEMO</p>
+        <h2>Confirm Your Donation</h2>
+
+        <p id="paymentSummary"></p>
+
+        <label for="demoPaymentMethod">Choose Demo Payment Method</label>
+
+        <select id="demoPaymentMethod">
+            <option value="UPI Demo">UPI Demo</option>
+            <option value="Card Demo">Card Demo</option>
+            <option value="Cash Demo">Cash Demo</option>
+        </select>
+
+        <p class="demo-warning">
+            This is a simulated payment.
+            No real money will be transferred.
+        </p>
+
+        <button type="button" id="confirmPayment">
+            Confirm Demo Payment
+        </button>
+
+        <button type="button" id="cancelPayment" class="cancel-btn">
+            Cancel
+        </button>
+
+        <p id="paymentMessage" class="message"></p>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <h2>FundFlow.</h2>
+        <p>Together We Make a Difference.</p>
+        <p>© 2026 FundFlow. All rights reserved.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
